@@ -1,0 +1,193 @@
+/* ProgressTracker.module.css */
+
+.progressTracker {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trackerTitle {
+  text-align: center;
+  color: #2c1810;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.statItem {
+  text-align: center;
+  flex: 1;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff6b35;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.honeycombGrid {
+  margin-bottom: 1.5rem;
+}
+
+.gridTitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #2c1810;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.honeyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  justify-items: center;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.honeyCell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.honeyCell:not(.filled) {
+  color: #ccc;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.filled {
+  background: linear-gradient(135deg, #ffd700, #ffb347);
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+  animation: honeyFill 0.5s ease-out;
+}
+
+.overflow {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ff6b35;
+  font-weight: 600;
+}
+
+.motivationalMessage {
+  text-align: center;
+  font-style: italic;
+  color: #2c1810;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 15px;
+  padding: 1rem;
+  border-left: 4px solid #ffd700;
+}
+
+.motivationalMessage p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@keyframes honeyFill {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .progressTracker {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .trackerTitle {
+    font-size: 1.2rem;
+  }
+  
+  .statsContainer {
+    gap: 0.5rem;
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+  }
+  
+  .statLabel {
+    font-size: 0.8rem;
+  }
+  
+  .honeyGrid {
+    max-width: 160px;
+  }
+  
+  .honeyCell {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+  
+  .motivationalMessage p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .statItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .statNumber {
+    font-size: 1.8rem;
+  }
+  
+  .statLabel {
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+}

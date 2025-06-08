@@ -1,0 +1,33 @@
+/* BuzzTimer.module.css */
+
+.buzzTimer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.timerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .buzzTimer {
+    padding: 0.5rem;
+  }
+  
+  .timerContainer {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timerContainer {
+    gap: 1rem;
+  }
+}
